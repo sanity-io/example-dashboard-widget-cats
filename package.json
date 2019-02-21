@@ -38,15 +38,10 @@
     "eslint-plugin-react": "^7.1.0"
   },
   "peerDependencies": {
-    "react": "15.x"
+    "prop-types": "^15.6 || ^16",
+    "react": "^16"
   },
   "dependencies": {
-    "@sanity/form-builder": "^0.114.1",
-    "detect-browser": "^2.0.0",
-    "get-it": "^4.1.4",
-    "katex": "^0.8.3",
-    "prop-types": "^15.5.10",
-    "react-ace": "5.0.1",
-    "react-katex": "^1.2.0"
+    "get-it": "^4.1.4"
   }
 }
