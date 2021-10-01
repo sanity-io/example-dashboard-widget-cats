@@ -1,13 +1,13 @@
 {
   "name": "sanity-plugin-dashboard-widget-cats",
-  "version": "0.0.2",
-  "author": "Thomas Drevon <thomas@sanity.io>",
+  "version": "1.0.0",
+  "author": "Sanity <hello@sanity.io>",
   "description": "Example dashboard widget for Sanity Content Studio",
   "homepage": "https://github.com/sanity-io/example-dashboard-widget-cats#readme",
   "public": true,
   "keywords": [
     "sanity",
-    "pluign",
+    "plugin",
     "part",
     "dashboard",
     "widget",
@@ -38,10 +38,11 @@
     "eslint-plugin-react": "^7.1.0"
   },
   "peerDependencies": {
-    "prop-types": "^15.6 || ^16",
-    "react": "^16"
+    "@sanity/dashboard": ">=2.13.0",
+    "react": "^16.9 || ^17",
+    "styled-components": "^5.2.0"
   },
   "dependencies": {
-    "get-it": "^4.1.4"
+    "get-it": "^5.0.3"
   }
 }
