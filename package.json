@@ -19,6 +19,7 @@
     "url": "https://github.com/sanity-io/example-dashboard-widget-cats/issues"
   },
   "scripts": {
+    "prepare": "npm run build",
     "build": "babel src -d lib --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
