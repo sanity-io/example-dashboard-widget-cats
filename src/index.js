@@ -1,51 +1,67 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import getIt from 'get-it'
-import jsonResponse from 'get-it/lib/middleware/jsonResponse'
-import promise from 'get-it/lib/middleware/promise'
-import styles from './Cats.css'
+import React, {useEffect, useState} from "react";
+import getIt from "get-it";
+import jsonResponse from "get-it/lib/middleware/jsonResponse";
+import promise from "get-it/lib/middleware/promise";
+import { DashboardWidget } from "@sanity/dashboard";
+import { Button, Flex, Card, Code } from "@sanity/ui";
+import styled from 'styled-components'
 
-const request = getIt([promise(), jsonResponse()])
+const request = getIt([promise(), jsonResponse()]);
 
-class Cats extends React.Component {
-  static propTypes = {
-    imageWidth: PropTypes.number
-  }
+const Image = styled.img`
+  display: block;
+  width: 100%;
+`
 
-  static defaultProps = {
-    imageWidth: 200
-  }
+function Cats() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
 
-  state = {
-    imageUrl: null,
-    error: null
-  }
-
-  componentDidMount() {
-    request({url: 'https://api.thecatapi.com/v1/images/search'})
-      .then(response => {
-        const imageUrl = response.body[0].url
-        this.setState({imageUrl})
+  const getCat = () => {
+    setIsLoading(true);
+    request({ url: "https://api.thecatapi.com/v1/images/search" })
+      .then((response) => {
+        const imageUrl = response.body[0].url;
+        setImageUrl(imageUrl);
+        setIsLoading(false);
       })
-      .catch(error => this.setState({error}))
-  }
+      .catch((error) => setError(error) && setIsLoading(false));
+  };
 
-  render() {
-    const {imageUrl, error} = this.state
-    if (error) {
-      return <pre>{JSON.stringify(error, null, 2)}</pre>
-    }
-    const {imageWidth} = this.props
-    return (
-      <div className={styles.container}>
-        <h2>A cat</h2>
-        <img src={imageUrl} width={imageWidth} />
-      </div>
-    )
-  }
+  useEffect(() => {
+    getCat();
+  }, []);
+
+  return (
+    <DashboardWidget
+      header="A cat"
+      footer={
+        <Flex direction="column" align="stretch">
+          <Button
+            flex={1}
+            paddingX={2}
+            paddingY={4}
+            mode="bleed"
+            tone="primary"
+            text="Get new cat"
+            loading={isLoading}
+            onClick={getCat}
+          />
+        </Flex>
+      }
+    >
+      {error && <Card paddingX={3} paddingY={4} tone="critical"><Code>{JSON.stringify(error, null, 2)}</Code></Card>}
+      {!error && (
+        <figure>
+          <Image src={imageUrl} />
+        </figure>
+      )}
+    </DashboardWidget>
+  );
 }
 
 export default {
   name: 'cats',
-  component: Cats
+  component: Cats,
 }
