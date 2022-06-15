@@ -2,3 +2,8 @@
 lib
 node_modules
 example/node_modules
+.idea/
+yalc.lock
+yarn.lock
+.yalc
+.parcel-cache
