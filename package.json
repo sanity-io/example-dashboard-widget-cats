@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-dashboard-widget-cats",
-  "version": "3.0.0-v3-studio.2",
+  "version": "3.0.0-v3-studio.3",
   "author": "Sanity <hello@sanity.io>",
   "description": "Example dashboard widget for Sanity Content Studio",
   "homepage": "https://github.com/sanity-io/example-dashboard-widget-cats#readme",
