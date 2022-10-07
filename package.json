@@ -49,7 +49,7 @@
     "url": "git+https://github.com/sanity-io/example-dashboard-widget-cats.git"
   },
   "dependencies": {
-    "@sanity/incompatible-plugin": "^1.0.3",
+    "@sanity/incompatible-plugin": "^1.0.4",
     "@sanity/ui": "^0.38.0",
     "get-it": "^5.0.3"
   },
