@@ -1,6 +1,9 @@
 import React, {useCallback, useEffect, useState} from 'react'
+//@ts-expect-error missing types
 import getIt from 'get-it'
+//@ts-expect-error missing types
 import jsonResponse from 'get-it/lib/middleware/jsonResponse'
+//@ts-expect-error missing types
 import promise from 'get-it/lib/middleware/promise'
 import {Button, Card, Code} from '@sanity/ui'
 import styled from 'styled-components'
@@ -19,10 +22,10 @@ function Cats() {
 
   const getCat = useCallback(() => {
     setIsLoading(true)
-    request<{body: {url: string}[]}>({
+    request({
       url: 'https://api.thecatapi.com/v1/images/search',
     })
-      .then((response) => {
+      .then((response: {body: {url: string}[]}) => {
         setImageUrl(response.body[0].url)
       })
       .catch((e: Error) => setError(e))

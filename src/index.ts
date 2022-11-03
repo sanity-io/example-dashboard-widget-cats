@@ -1,0 +1,1 @@
+export {catsWidget} from './plugin'
