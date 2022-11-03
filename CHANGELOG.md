@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0-v3-studio.5](https://github.com/sanity-io/example-dashboard-widget-cats/compare/v3.0.0-v3-studio.4...v3.0.0-v3-studio.5) (2022-11-03)
+
+### Bug Fixes
+
+- compiled for sanity 3.0.0-rc.0 ([10931e3](https://github.com/sanity-io/example-dashboard-widget-cats/commit/10931e3880c801f58f129c1f581fdacaf070fd3d))
+
 ## [3.0.0-v3-studio.4](https://github.com/sanity-io/example-dashboard-widget-cats/compare/v3.0.0-v3-studio.3...v3.0.0-v3-studio.4) (2022-10-27)
 
 ### Bug Fixes
