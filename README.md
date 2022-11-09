@@ -36,7 +36,7 @@ Add it as a widget to @sanity/dashboard plugin in sanity.config.ts (or .js):
 import { dashboardTool } from "@sanity/dashboard";
 import { catsWidget } from "sanity-plugin-dashboard-widget-cats";
 
-export default createConfig({
+export default defineConfig({
   // ...
   plugins: [
      dashboardTool({
