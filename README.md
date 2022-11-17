@@ -1,10 +1,7 @@
 # sanity-plugin-dashboard-widget-cats
 
-> **NOTE**
->
-> This is the **Sanity Studio v3 version** of sanity-plugin-dashboard-widget-cats.
->
-> For the v2 version, please refer to the [v2-branch](https://github.com/sanity-io/plugin-template-dashboard-widget-cats).
+>This is a **Sanity Studio v3** plugin.
+> For the v2 version, please refer to the [v2-branch](https://github.com/sanity-io/example-dashboard-widget-cats/tree/studio-v2).
 
 ## What is it?
 
@@ -17,13 +14,13 @@ This plugin mostly exist to show how a simple widget can be made.
 ## Install
 
 ```
-npm install --save sanity-plugin-dashboard-widget-cats@studio-v3
+npm install --save sanity-plugin-dashboard-widget-cats
 ```
 
 or 
 
 ```
-yarn add sanity-plugin-dashboard-widget-cats@studio-v3
+yarn add sanity-plugin-dashboard-widget-cats
 ```
 
 Ensure that you have followed install and usage instructions for @sanity/dashboard.
