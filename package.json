@@ -1,10 +1,7 @@
 {
   "name": "sanity-plugin-dashboard-widget-cats",
   "version": "1.0.0",
-  "author": "Sanity <hello@sanity.io>",
   "description": "Example dashboard widget for Sanity Content Studio",
-  "homepage": "https://github.com/sanity-io/example-dashboard-widget-cats#readme",
-  "public": true,
   "keywords": [
     "sanity",
     "plugin",
@@ -13,21 +10,29 @@
     "widget",
     "cats"
   ],
-  "main": "lib/index.js",
-  "license": "ISC",
+  "homepage": "https://github.com/sanity-io/example-dashboard-widget-cats#readme",
   "bugs": {
     "url": "https://github.com/sanity-io/example-dashboard-widget-cats/issues"
   },
-  "scripts": {
-    "prepare": "npm run build",
-    "build": "babel src -d lib --copy-files",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sanity-io/example-dashboard-widget-cats.git"
+    "url": "git@github.com:sanity-io/example-dashboard-widget-cats.git"
+  },
+  "license": "ISC",
+  "author": "Sanity <hello@sanity.io>",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib --copy-files",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "get-it": "^5.0.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@sanity/semantic-release-preset": "^2.0.2",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-syntax-class-properties": "^6.13.0",
@@ -43,7 +48,5 @@
     "react": "^16.9 || ^17",
     "styled-components": "^5.2.0"
   },
-  "dependencies": {
-    "get-it": "^5.0.3"
-  }
+  "public": true
 }
