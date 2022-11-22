@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git@github.com:sanity-io/example-dashboard-widget-cats.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "Sanity <hello@sanity.io>",
   "main": "lib/index.js",
   "scripts": {
